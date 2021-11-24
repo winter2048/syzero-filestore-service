@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>SyZero.Blog.Application</RootNamespace>
+    <AssemblyName>SyZero.Blog.Application</AssemblyName>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SyZero.Blog.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SyZero.Blog.IApplication\SyZero.Blog.IApplication.csproj" />
+    <ProjectReference Include="..\SyZero.Blog.Repository\SyZero.Blog.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+
