@@ -1,8 +1,8 @@
 using AutoMapper;
-using SyZero.Blog.Core.Users;
-using SyZero.Blog.IApplication.Users.Dto;
+using SyZero.FileStore.Core.Users;
+using SyZero.FileStore.IApplication.Users.Dto;
 
-namespace SyZero.Blog.Application.MapProfile
+namespace SyZero.FileStore.Application.MapProfile
 {
     public class AppMapProfile : Profile
     {

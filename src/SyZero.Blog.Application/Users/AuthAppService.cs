@@ -3,10 +3,10 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using SyZero.Application.Service;
-using SyZero.Blog.Core.Users;
-using SyZero.Blog.IApplication.Users;
-using SyZero.Blog.IApplication.Users.Dto;
-using SyZero.Blog.Repository;
+using SyZero.FileStore.Core.Users;
+using SyZero.FileStore.IApplication.Users;
+using SyZero.FileStore.IApplication.Users.Dto;
+using SyZero.FileStore.Repository;
 using SyZero.Cache;
 using SyZero.Logger;
 using SyZero.Runtime.Security;
@@ -14,7 +14,7 @@ using SyZero.Runtime.Session;
 using SyZero.Serialization;
 using SyZero.Web.Common;
 
-namespace SyZero.Blog.Application.Users
+namespace SyZero.FileStore.Application.Users
 {
     public class AuthAppService : ApplicationService, IAuthAppService
     {

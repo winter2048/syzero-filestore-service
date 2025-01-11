@@ -2,5 +2,5 @@
 WORKDIR /app
 EXPOSE 5000
 COPY . .
-ENTRYPOINT ["dotnet", "SyZero.Blog.Web.dll"]
+ENTRYPOINT ["dotnet", "SyZero.FileStore.Web.dll"]
 

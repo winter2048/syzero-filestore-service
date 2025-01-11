@@ -10,7 +10,7 @@
       // 第二步
       stage('代码编译'){
           sh """
-              cd src/SyZero.Blog.Web
+              cd src/SyZero.FileStore.Web
               rm -rf bin/*
               dotnet restore
               dotnet build
@@ -22,7 +22,7 @@
       stage('构建镜像'){
         withCredentials([usernamePassword(credentialsId: "${docker_auth}", passwordVariable: 'docker_pwd', usernameVariable: 'docker_name')]) {
           sh """
-              cd src/SyZero.Blog.Web/bin/release/netcoreapp3.1
+              cd src/SyZero.FileStore.Web/bin/release/netcoreapp3.1
               mkdir UserFiles
               docker build -t ${image_name} .
               docker login -u ${docker_name} -p '${docker_pwd}' 192.168.2.40:8888
@@ -33,9 +33,9 @@
        // 第四步
       stage('部署到K8S平台'){
         sh """
-          sed -i 's#\$IMAGE_NAME#${image_name}#' src/SyZero.Blog.Web/syzero-authorization-service.yaml
+          sed -i 's#\$IMAGE_NAME#${image_name}#' src/SyZero.FileStore.Web/syzero-authorization-service.yaml
         """
-        kubernetesDeploy configs: 'src/SyZero.Blog.Web/syzero-authorization-service.yaml', kubeConfig: [path: ''], kubeconfigId: "${k8s_auth}", secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+        kubernetesDeploy configs: 'src/SyZero.FileStore.Web/syzero-authorization-service.yaml', kubeConfig: [path: ''], kubeconfigId: "${k8s_auth}", secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
       }
 }
 

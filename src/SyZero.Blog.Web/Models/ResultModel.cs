@@ -1,4 +1,4 @@
-﻿namespace SyZero.Blog.Web.Core.Models
+﻿namespace SyZero.FileStore.Web.Core.Models
 {
     public class ResultModel
     {

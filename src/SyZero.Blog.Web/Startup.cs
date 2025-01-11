@@ -9,8 +9,8 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using SyZero.AspNetCore;
-using SyZero.Blog.Repository;
-using SyZero.Blog.Web.Core.Filter;
+using SyZero.FileStore.Repository;
+using SyZero.FileStore.Web.Core.Filter;
 using SyZero.AutoMapper;
 using SyZero.Consul;
 using SyZero.DynamicWebApi;
@@ -19,7 +19,7 @@ using SyZero.Log4Net;
 using SyZero.Redis;
 using SyZero.Web.Common;
 
-namespace SyZero.Blog.Web
+namespace SyZero.FileStore.Web
 {
     public class Startup
     {
@@ -95,7 +95,7 @@ namespace SyZero.Blog.Web
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SyZero.Blog.Web API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SyZero.FileStore.Web API V1");
                 c.RoutePrefix = "api/swagger";
 
             });

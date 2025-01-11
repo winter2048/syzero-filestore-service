@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using SyZero.Blog.IApplication.Users.Dto;
+using SyZero.FileStore.IApplication.Users.Dto;
 using SyZero.Cache;
 using SyZero.Client;
 using SyZero.Logger;
@@ -11,7 +11,7 @@ using SyZero.Runtime.Security;
 using SyZero.Serialization;
 using SyZero.Web.Common;
 
-namespace SyZero.Blog.IApplication.Users
+namespace SyZero.FileStore.IApplication.Users
 {
     public class AuthAppServiceFallback : IAuthAppService, IFallback
     {

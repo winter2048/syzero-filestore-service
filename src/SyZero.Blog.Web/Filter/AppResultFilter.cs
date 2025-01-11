@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using SyZero.Blog.Web.Core.Models;
+using SyZero.FileStore.Web.Core.Models;
 
-namespace SyZero.Blog.Web.Core.Filter
+namespace SyZero.FileStore.Web.Core.Filter
 {
     /// <summary>
     /// 异常过滤器

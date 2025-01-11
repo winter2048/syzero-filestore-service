@@ -1,7 +1,7 @@
 ﻿using System;
 using SyZero.Domain.Entities;
 
-namespace SyZero.Blog.Core.Users
+namespace SyZero.FileStore.Core.Users
 {
     /// <summary>
     /// 用户

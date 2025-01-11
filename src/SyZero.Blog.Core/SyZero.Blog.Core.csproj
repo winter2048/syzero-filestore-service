@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <AssemblyName>SyZero.Blog.Core</AssemblyName>
-    <RootNamespace>SyZero.Blog.Core</RootNamespace>
+    <AssemblyName>SyZero.FileStore.Core</AssemblyName>
+    <RootNamespace>SyZero.FileStore.Core</RootNamespace>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 

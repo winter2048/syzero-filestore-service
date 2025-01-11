@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using SyZero.Application.Attributes;
 using SyZero.Application.Routing;
-using SyZero.Blog.IApplication.Users.Dto;
+using SyZero.FileStore.IApplication.Users.Dto;
 using SyZero.Web.Common;
 
-namespace SyZero.Blog.IApplication.Users
+namespace SyZero.FileStore.IApplication.Users
 {
     public interface IAuthAppService : IApplicationServiceBase
     {

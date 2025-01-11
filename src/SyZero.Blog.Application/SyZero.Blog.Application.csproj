@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>SyZero.Blog.Application</RootNamespace>
-    <AssemblyName>SyZero.Blog.Application</AssemblyName>
+    <RootNamespace>SyZero.FileStore.Application</RootNamespace>
+    <AssemblyName>SyZero.FileStore.Application</AssemblyName>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>SyZero.Blog.Application.xml</DocumentationFile>
+    <DocumentationFile>SyZero.FileStore.Application.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SyZero.Blog.IApplication\SyZero.Blog.IApplication.csproj" />
-    <ProjectReference Include="..\SyZero.Blog.Repository\SyZero.Blog.Repository.csproj" />
+    <ProjectReference Include="..\SyZero.FileStore.IApplication\SyZero.FileStore.IApplication.csproj" />
+    <ProjectReference Include="..\SyZero.FileStore.Repository\SyZero.FileStore.Repository.csproj" />
   </ItemGroup>
 
 </Project>

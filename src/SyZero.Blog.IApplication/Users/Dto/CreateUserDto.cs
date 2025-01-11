@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SyZero.Application.Service.Dto;
 
-namespace SyZero.Blog.IApplication.Users.Dto
+namespace SyZero.FileStore.IApplication.Users.Dto
 {
     public class CreateUserDto : EntityDto
     {

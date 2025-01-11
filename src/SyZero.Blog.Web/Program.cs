@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 
-namespace SyZero.Blog.Web
+namespace SyZero.FileStore.Web
 {
     public class Program
     {

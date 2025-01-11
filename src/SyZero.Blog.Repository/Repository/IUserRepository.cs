@@ -1,8 +1,8 @@
 ﻿
-using SyZero.Blog.Core.Users;
+using SyZero.FileStore.Core.Users;
 using SyZero.Domain.Repository;
 
-namespace SyZero.Blog.Repository
+namespace SyZero.FileStore.Repository
 {
     public interface IUserRepository : IRepository<User>
     {

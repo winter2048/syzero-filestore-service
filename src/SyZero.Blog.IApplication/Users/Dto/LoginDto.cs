@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SyZero.Blog.IApplication.Users.Dto
+namespace SyZero.FileStore.IApplication.Users.Dto
 {
     public class LoginDto
     {

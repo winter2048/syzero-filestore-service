@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>SyZero.Blog.Web.xml</DocumentationFile>
+    <DocumentationFile>SyZero.FileStore.Web.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,14 +33,14 @@
     <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Nacos\SyZero.Nacos.csproj" />
     <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Redis\SyZero.Redis.csproj" />
     <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Swagger\SyZero.Swagger.csproj" />
-    <ProjectReference Include="..\SyZero.Blog.Application\SyZero.Blog.Application.csproj" />
+    <ProjectReference Include="..\SyZero.FileStore.Application\SyZero.FileStore.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Dockerfile">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SyZero.Blog.Web.xml">
+    <None Update="SyZero.FileStore.Web.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

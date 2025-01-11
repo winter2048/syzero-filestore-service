@@ -3,7 +3,7 @@ using SqlSugar;
 using System;
 using SyZero.SqlSugar.DbContext;
 
-namespace SyZero.Blog.Repository
+namespace SyZero.FileStore.Repository
 {
     public class BlogDbContext : SyZeroDbContext
     {
