@@ -47,16 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.Gateway", "..\..\syz
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SyZero.Service", "SyZero.Service", "{9697BD93-A441-4E9E-8F62-460EE854531B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26717BD0-67B9-4427-90F9-0184284EF0B3}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.Swagger", "..\..\syzero-core\src\SyZero.Core\SyZero.Swagger\SyZero.Swagger.csproj", "{F9FE413E-6691-4F15-B464-0E5B6CFD8BF9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.Feign", "..\..\syzero-core\src\SyZero.Core\SyZero.Feign\SyZero.Feign.csproj", "{4F7D41E2-BF3D-40EB-A493-C9A40EF26FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyZero.RabbitMQ", "..\..\syzero-core\src\SyZero.Core\SyZero.RabbitMQ\SyZero.RabbitMQ.csproj", "{58C0BCA9-9758-4189-8A98-1AA4F658ABBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.RabbitMQ", "..\..\syzero-core\src\SyZero.Core\SyZero.RabbitMQ\SyZero.RabbitMQ.csproj", "{58C0BCA9-9758-4189-8A98-1AA4F658ABBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

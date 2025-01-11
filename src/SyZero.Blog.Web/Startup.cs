@@ -1,5 +1,4 @@
-﻿using Autofac;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.Configuration;
@@ -54,26 +53,22 @@ namespace SyZero.Blog.Web
             });
             //Swagger
             services.AddSwagger();
-        }
-
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            //使用SyZero
-            builder.RegisterModule<SyZeroModule>();
             //使用AutoMapper
-            builder.RegisterModule<AutoMapperModule>();
+            services.AddSyZeroAutoMapper();
             //使用SqlSugar仓储
-            builder.RegisterModule<BlogRepositoryModule>();
+            services.AddSyZeroSqlSugar<BlogDbContext>();
             //注入控制器
-            builder.RegisterModule<SyZeroControllerModule>();
-            //注入Log4Net
-            builder.RegisterModule<Log4NetModule>();
-            //注入Redis
-            builder.RegisterModule<RedisModule>();
+            services.AddSyZeroController();
             //注入公共层
-            builder.RegisterModule<CommonModule>();
+            services.AddSyZeroCommon();
+            //注入Log4Net
+            services.AddSyZeroLog4Net();
+            //注入Redis
+            services.AddSyZeroRedis();
+            //注入Consul
+            services.AddConsul();
             //注入Feign
-            builder.RegisterModule<FeignModule>();
+            services.AddSyZeroFeign();
         }
 
 
@@ -92,6 +87,7 @@ namespace SyZero.Blog.Web
             });
             app.UseRouting();
             app.UseStaticFiles();
+            app.UseSyAuthMiddleware();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -104,7 +100,6 @@ namespace SyZero.Blog.Web
 
             });
             app.UseConsul();
-            app.UseSyAuthMiddleware();
             app.UseSyZero();
         }
     }
