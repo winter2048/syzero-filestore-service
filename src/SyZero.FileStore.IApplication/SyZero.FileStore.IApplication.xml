@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SyZero.FileStore.IApplication</name>
+    </assembly>
+    <members>
+        <member name="P:SyZero.FileStore.IApplication.Container.Dto.ContainerInfoDto.Name">
+            <summary>
+            容器名
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.Container.Dto.ContainerInfoDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.Container.Dto.ContainerInfoDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.Container.Dto.ContainerInfoDto.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Container.IContainerAppService.GetContainerList">
+            <summary>
+            获取所有容器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Container.IContainerAppService.CreateContainer(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <summary>
+            创建容器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Container.IContainerAppService.DeleteContainer(System.String)">
+            <summary>
+            删除容器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Container.IContainerAppService.ContainerInfo(System.String)">
+            <summary>
+            获取容器信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Container.IContainerAppService.UpdateContainerInfo(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <summary>
+            更新容器信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.File.Dto.FileInfoDto.Name">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.File.Dto.FileInfoDto.OriginalName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.File.Dto.FileInfoDto.ContentType">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.File.Dto.FileInfoDto.Hash">
+            <summary>
+            文件哈希值
+            </summary>
+        </member>
+        <member name="P:SyZero.FileStore.IApplication.File.Dto.FileInfoDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Users.IFileAppService.UploadFile(System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Users.IFileAppService.DeleteFile(System.String,System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Users.IFileAppService.DownloadFile(System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Users.IFileAppService.FileInfo(System.String,System.String)">
+            <summary>
+            获取文件信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.FileStore.IApplication.Users.IFileAppService.GetFileList(System.String)">
+            <summary>
+            获取容器下的所有文件
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

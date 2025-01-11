@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>SyZero.FileStore.Repository</AssemblyName>
+    <RootNamespace>SyZero.FileStore.Repository</RootNamespace>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.SqlSugar\SyZero.SqlSugar.csproj" />
+    <ProjectReference Include="..\SyZero.FileStore.Core\SyZero.FileStore.Core.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+

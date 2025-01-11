@@ -1,0 +1,75 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Deployment
+
+# run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+        - Test
+        - Production
+      imageVersion:
+        description: 'Version'
+        required: false
+        default: 'dev'
+        type: string
+  workflow_run:
+    workflows: [Official]
+    types: [completed]
+    branches: [dev]
+
+env:
+  SSH_HOST: ${{ secrets.SSH_HOST }}
+  SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+  SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+  IMAGE_NAME: syzero.filestore.service
+  IMAGE_VERSION: dev
+  ENVIRONMENT: Test
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initialization 
+        run: |
+          imageVersion=${{ env.IMAGE_VERSION }}
+          environment=${{ env.ENVIRONMENT }}
+          if [ "${{ inputs.imageVersion }}" != "" ]; then
+            echo "IMAGE_VERSION=${{ inputs.imageVersion }}" >> $GITHUB_ENV
+            imageVersion=${{ inputs.imageVersion }}
+          fi
+          if [ "${{ inputs.environment }}" != "" ]; then
+            echo "ENVIRONMENT=${{ inputs.environment }}" >> $GITHUB_ENV
+            environment=${{ inputs.environment }}
+          fi
+          if [ "$environment" == "Production" ]; then
+            echo "SSH_HOST=${{ secrets.SSH_HOST }}" >> $GITHUB_ENV
+            echo "SSH_USERNAME=${{ secrets.SSH_USERNAME }}" >> $GITHUB_ENV
+            echo "SSH_PASSWORD=${{ secrets.SSH_PASSWORD }}" >> $GITHUB_ENV
+          fi
+          if [ "$environment" == "Test" ]; then
+            echo "SSH_HOST=${{ secrets.SSH_HOST_TEST }}" >> $GITHUB_ENV
+            echo "SSH_USERNAME=${{ secrets.SSH_USERNAME_TEST }}" >> $GITHUB_ENV
+            echo "SSH_PASSWORD=${{ secrets.SSH_PASSWORD_TEST }}" >> $GITHUB_ENV
+          fi
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ env.SSH_HOST }}
+          username: ${{ env.SSH_USERNAME }}
+          password: ${{ env.SSH_PASSWORD }}
+          script: |
+            docker login harbor.syzero.com -u ${{ secrets.HARBOR_DOCKERHUB_USERNAME }} -p ${{ secrets.HARBOR_DOCKERHUB_TOKEN }}
+            docker stop ${{ env.IMAGE_NAME }}
+            docker rm ${{ env.IMAGE_NAME }}
+            docker pull harbor.syzero.com/syzero/${{ env.IMAGE_NAME }}:${{ env.IMAGE_VERSION }}
+            docker run -d -p 5004:5001 --name=${{ env.IMAGE_NAME }} --restart=always -e "ASPNETCORE_ENVIRONMENT=${{ env.ENVIRONMENT }}" harbor.syzero.com/syzero/${{ env.IMAGE_NAME }}:${{ env.IMAGE_VERSION }}

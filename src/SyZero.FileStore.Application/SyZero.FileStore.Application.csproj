@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SyZero.FileStore.Application</RootNamespace>
+    <AssemblyName>SyZero.FileStore.Application</AssemblyName>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SyZero.FileStore.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SyZero.FileStore.IApplication\SyZero.FileStore.IApplication.csproj" />
+    <ProjectReference Include="..\SyZero.FileStore.Repository\SyZero.FileStore.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+
