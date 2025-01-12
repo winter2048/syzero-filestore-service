@@ -8,7 +8,6 @@ using SyZero.Client;
 using SyZero.Logger;
 using SyZero.Runtime.Security;
 using SyZero.Serialization;
-using SyZero.Web.Common;
 using System.IO;
 using SyZero.FileStore.IApplication.Container.Dto;
 using SyZero.Application.Routing;
@@ -26,27 +25,32 @@ namespace SyZero.FileStore.IApplication.Container
 
         public Task<ContainerInfoDto> ContainerInfo(string containerName)
         {
-            throw new NotImplementedException();
+              _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
 
         public Task<bool> CreateContainer(string containerName, CreateContainerDto container)
         {
-            throw new NotImplementedException();
+              _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
 
         public Task<bool> DeleteContainer(string containerName)
         {
-            throw new NotImplementedException();
+              _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
 
         public Task<List<ContainerInfoDto>> GetContainerList()
         {
-            throw new NotImplementedException();
+              _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
 
         public Task<bool> UpdateContainerInfo(string containerName, CreateContainerDto container)
         {
-            throw new NotImplementedException();
+              _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
     }
 }

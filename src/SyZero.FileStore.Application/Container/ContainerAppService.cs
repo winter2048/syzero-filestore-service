@@ -97,6 +97,7 @@ namespace SyZero.FileStore.Application.Container
 
         public async Task<List<ContainerInfoDto>> GetContainerList()
         {
+            CheckPermission("");
             var list = await _containerInformationRepository.GetListAsync();
 
             return ObjectMapper.Map<List<ContainerInfoDto>>(list);

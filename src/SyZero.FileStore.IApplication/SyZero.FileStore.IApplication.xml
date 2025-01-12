@@ -114,5 +114,86 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.GetContainerList">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.CreateContainer(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.DeleteContainer(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.ContainerInfo(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.UpdateContainerInfo(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.SyZero#FileStore#IApplication#Container#IContainerAppService#GetContainerList">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.SyZero#FileStore#IApplication#Container#IContainerAppService#CreateContainer(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.SyZero#FileStore#IApplication#Container#IContainerAppService#DeleteContainer(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.SyZero#FileStore#IApplication#Container#IContainerAppService#ContainerInfo(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationContainerIContainerAppService.SyZero#FileStore#IApplication#Container#IContainerAppService#UpdateContainerInfo(System.String,SyZero.FileStore.IApplication.Container.Dto.CreateContainerDto)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.UploadFile(System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.DeleteFile(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.DownloadFile(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.FileInfo(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.GetFileList(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.SyZero#FileStore#IApplication#Users#IFileAppService#UploadFile(System.String,System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.SyZero#FileStore#IApplication#Users#IFileAppService#DeleteFile(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.SyZero#FileStore#IApplication#Users#IFileAppService#DownloadFile(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.SyZero#FileStore#IApplication#Users#IFileAppService#FileInfo(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroFileStoreIApplicationUsersIFileAppService.SyZero#FileStore#IApplication#Users#IFileAppService#GetFileList(System.String)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
